@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+set(CMAKE_CXX_STANDARD 14)
+include_directories(${PROJECT_SOURCE_DIR}/func)
+message(STATUS ${PROJECT_SOURCE_DIR}/func)
+link_libraries(${PROJECT_BINARY_DIR}/lib)
+message(STATUS ${PROJECT_BINARY_DIR}/lib)
+add_executable(hello main.cpp)
+target_link_libraries(hello Func)
